@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "task_1": "npx ts-node task_1/task_1.ts"
+  },
   "dependencies": {
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"

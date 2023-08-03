@@ -25,6 +25,9 @@ export const mConverter = (convert_to: MeasureOfLengthType, value: number) => {
                 value: Number((value * 3.2808).toFixed(2))
             }
         default:
-            return value
+            return {
+                unit: MeasureOfLength.METERS,
+                value: value
+            }
     }
 }

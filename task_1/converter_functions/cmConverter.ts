@@ -23,6 +23,9 @@ export const cmConverter = (convert_to: MeasureOfLengthType, value: number) => {
                 value: Number((value * 0.39370).toFixed(2))
             };
         default:
-            return value
+            return {
+                unit: MeasureOfLength.CENTIMETERS,
+                value: value
+            }
     }
 }

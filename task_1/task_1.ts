@@ -1,5 +1,5 @@
 import {InputDataType} from './types';
-import {MeasureOfLength} from './enum';
+import {ErrorTask1, MeasureOfLength} from './enum';
 import {cmConverter, ftConverter, inConverter, mConverter} from './converter_functions';
 import {data1, data2} from './data';
 
@@ -25,7 +25,7 @@ const converter = (obj: InputDataType) => {
     // Работа стандартного конвертера
     // Проверка правильности выбора единиц измерения
     if (convert_to !== MeasureOfLength.METERS && convert_to !== MeasureOfLength.CENTIMETERS && convert_to !== MeasureOfLength.INCHES && convert_to !== MeasureOfLength.FEET) {
-        return 'Some error has occurred. Please check that you have chosen one of the length options for CONVERT_TO: m, cm, in, ft'
+        return ErrorTask1.CONVERT_TO
     }
 
     if (unit === MeasureOfLength.METERS) {
@@ -37,7 +37,7 @@ const converter = (obj: InputDataType) => {
     } else if (unit === MeasureOfLength.FEET) {
         return ftConverter(convert_to, value);
     } else {
-        return 'Some error has occurred. Please check that you have chosen one of the length options for UNIT: m, cm, in, ft'
+        return ErrorTask1.UNIT
     }
 }
 

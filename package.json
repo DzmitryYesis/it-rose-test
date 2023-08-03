@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "task_1": "npx ts-node task_1/task_1.ts"
+    "task_1": "npx ts-node task_1/task_1.ts",
+    "task_2": "npx ts-node task_2/task_2.ts"
   },
   "dependencies": {
     "ts-node": "^10.9.1",
